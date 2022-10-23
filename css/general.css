@@ -55,10 +55,16 @@ Medium: 11px
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
-* {
+*,
+*::before,
+*::after {
    margin: 0;
    padding: 0;
    box-sizing: inherit;
+}
+*:focus {
+   outline: none;
+   box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 html {
    font-family: "Rubik", sans-serif;
@@ -141,6 +147,7 @@ img {
    margin-bottom: 1.6rem;
    letter-spacing: 0.75px;
 }
+.btn,
 .btn:link,
 .btn:visited {
    font-size: 2rem;
@@ -148,6 +155,10 @@ img {
    font-weight: 700;
    border-radius: 9px;
    transition: all 0.3s;
+
+   border: none;
+   cursor: pointer;
+   font-family: inherit;
 }
 .btn--full:link,
 .btn--full:visited {
@@ -167,6 +178,17 @@ img {
 .btn--optional:active {
    background-color: #fdf2e9;
    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+   background-color: #45260a;
+   color: #fdf2e9;
+   align-self: end;
+   padding: 1.2rem;
+}
+.btn--form:hover {
+   background-color: #fff;
+   color: #555;
 }
 
 strong {
