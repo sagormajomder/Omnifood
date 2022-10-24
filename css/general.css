@@ -152,7 +152,7 @@ img {
 .btn:visited {
    font-size: 2rem;
    padding: 1.6rem 3.2rem;
-   font-weight: 700;
+   font-weight: 500;
    border-radius: 9px;
    transition: all 0.3s;
 
