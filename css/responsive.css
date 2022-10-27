@@ -1,0 +1,14 @@
+/* /////////////////////////// */
+/* BELOW 84*16 = 1344px (Smaller Desktops) */
+/* /////////////////////////// */
+@media (max-width: 84em) {
+   .hero-container {
+      max-width: 120rem;
+   }
+   .heading-primary {
+      font-size: 4.8rem;
+   }
+   .gallery {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
