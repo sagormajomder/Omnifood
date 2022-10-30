@@ -1,5 +1,5 @@
 /* /////////////////////////// */
-/* BELOW 1344px = 1344/16= 84em ( (Smaller Desktops) */
+/* BELOW 1344px = 1344/16= 84em ( Smaller Desktops) */
 /* /////////////////////////// */
 @media (max-width: 84em) {
    .hero-container {
@@ -37,7 +37,7 @@
       padding: 0 3.2rem;
    }
    .main-nav-list {
-      gap: 4.8rem;
+      gap: 3.2rem;
    }
    .testimonials-container {
       padding: 9.6rem 3.2rem;
@@ -95,5 +95,51 @@
    }
    .btn--form {
       margin-top: 1.2rem;
+   }
+
+   .btn-mobile-nav {
+      display: block;
+   }
+
+   .main-nav {
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease-in;
+
+      transform: translateX(100%);
+
+      /* display:none doesn't allow transition at all */
+      /* display: none; */
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+   }
+   .nav-open .main-nav {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+   }
+   .nav-open .icon-mobile-nav[name="menu-outline"] {
+      display: none;
+   }
+   .nav-open .icon-mobile-nav[name="close-outline"] {
+      display: block;
+   }
+   .main-nav-list {
+      flex-direction: column;
+      gap: 4.8rem;
+   }
+   .main-nav-link:link,
+   .main-nav-link:visited {
+      font-size: 3rem;
    }
 }
