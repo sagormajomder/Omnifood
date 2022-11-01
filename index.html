@@ -4,6 +4,14 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+         name="description"
+         content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+      />
+      <!-- Fav Icon -->
+      <link rel="icon" href="img/favicon.png" />
+      <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+      <link rel="manifest" href="./manifest.webmanifest" />
       <!-- Google Font -->
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
@@ -14,10 +22,10 @@
       <link rel="stylesheet" href="css/general.css" />
       <link rel="stylesheet" href="css/style.css" />
       <link rel="stylesheet" href="./css/responsive.css" />
-      <title>Omnifood Project</title>
+      <title>Omnifood &mdash; Never cook again!</title>
    </head>
    <body>
-      <header class="header">
+      <header class="header sticky">
          <a href="#">
             <img
                class="logo"
@@ -27,18 +35,26 @@
          </a>
          <nav class="main-nav">
             <ul class="main-nav-list">
-               <li><a href="#" class="main-nav-link">How it works?</a></li>
-               <li><a href="#" class="main-nav-link">Meals</a></li>
-               <li><a href="#" class="main-nav-link">Testimonial</a></li>
-               <li><a href="#" class="main-nav-link">Princing</a></li>
+               <li><a href="#how" class="main-nav-link">How it works?</a></li>
+               <li><a href="#meals" class="main-nav-link">Meals</a></li>
                <li>
-                  <a href="#" class="main-nav-link nav-cta">Try for free</a>
+                  <a href="#testimonials" class="main-nav-link">Testimonial</a>
+               </li>
+               <li><a href="#pricing" class="main-nav-link">Princing</a></li>
+               <li>
+                  <a href="#cta" class="main-nav-link nav-cta">Try for free</a>
                </li>
             </ul>
          </nav>
          <button class="btn-mobile-nav">
-            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+            <ion-icon
+               class="icon-mobile-nav open"
+               name="menu-outline"
+            ></ion-icon>
+            <ion-icon
+               class="icon-mobile-nav close"
+               name="close-outline"
+            ></ion-icon>
          </button>
       </header>
       <main>
@@ -53,15 +69,10 @@
                      make you eat healthy again. Tailored to your personal
                      tastes and nutritional needs.
                   </p>
-                  <a
-                     class="btn btn--full margin-right-sm"
-                     href="#"
-                     target="_blank"
+                  <a class="btn btn--full margin-right-sm" href="#cta"
                      >Start eating well</a
                   >
-                  <a class="btn btn--optional" href="#" target="_blank" href="#"
-                     >Learn More &darr;</a
-                  >
+                  <a class="btn btn--optional" href="#how">Learn More &darr;</a>
                   <div class="delivered-meals">
                      <div class="delivered-images">
                         <img
@@ -96,7 +107,17 @@
                </div>
 
                <div class="hero-img">
-                  <img src="./img/hero.png" alt="" />
+                  <!-- Optimize Image -->
+                  <picture>
+                     <source srcset="img/hero.webp" type="image/webp" />
+                     <source srcset="img/hero-min.png" type="image/png" />
+
+                     <img
+                        src="img/hero-min.png"
+                        class="hero-img"
+                        alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+                     />
+                  </picture>
                </div>
             </div>
          </section>
@@ -123,7 +144,7 @@
          <!-- End Section-feature-in -->
 
          <!-- Start Section-how  -->
-         <section class="section-how">
+         <section class="section-how" id="how">
             <div class="container">
                <span class="subheading">How it works</span>
                <h2 class="heading-secondary">
@@ -196,7 +217,7 @@
          </section>
          <!-- END Section-how  -->
          <!-- Start Section Meals -->
-         <section class="section-meals">
+         <section class="section-meals" id="meals">
             <div class="container center-text">
                <span class="subheading">Meals</span>
                <h2 class="heading-secondary">
@@ -356,7 +377,7 @@
          </section>
          <!-- END Section Meals -->
          <!-- START section testimonials -->
-         <section class="section-testimonials">
+         <section class="section-testimonials" id="testimonials">
             <div class="testimonials-container">
                <span class="subheading">Testimonial</span>
                <h2 class="heading-secondary">
@@ -503,7 +524,7 @@
 
          <!-- END section testimonials -->
          <!-- Start Section pricing -->
-         <section class="section-pricing">
+         <section class="section-pricing" id="pricing">
             <div class="container">
                <span class="subheading">Pricing</span>
                <h2 class="heading-secondary">
@@ -653,7 +674,7 @@
          </section>
          <!-- End Section pricing -->
          <!-- Start CTA Section  -->
-         <section class="section-cta">
+         <section class="section-cta" id="cta">
             <div class="container">
                <div class="cta-container">
                   <div class="cta-text-box">
@@ -708,7 +729,7 @@
                   <div
                      class="cta-img-box"
                      role="img"
-                     aria-level="woman eating food"
+                     aria-label="Woman enjoying food"
                   ></div>
                </div>
             </div>
@@ -753,7 +774,8 @@
                   </li>
                </ul>
                <p class="copywrite">
-                  Copywrite &copy; 2027 by Omnifood,Inc. All rights reserved.
+                  Copywrite &copy; <span class="year">2027</span> by
+                  Omnifood,Inc. All rights reserved.
                </p>
             </div>
             <div class="address-col">
@@ -818,5 +840,12 @@
          nomodule
          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
       ></script>
+      <!-- JS Library For Safari Smoth Scroling -->
+      <script
+         defer
+         src=" https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+      ></script>
+      <!-- Custome Srcipt -->
+      <script defer src="./js/app.js"></script>
    </body>
 </html>

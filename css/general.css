@@ -66,10 +66,13 @@ Medium: 11px
    outline: none;
    box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
+
 html {
    font-size: 62.5%;
    overflow-x: hidden;
+   /* scroll-behavior: smooth; */
 }
+
 body {
    font-family: "Rubik", sans-serif;
    line-height: 1;
@@ -78,6 +81,7 @@ body {
    box-sizing: border-box;
    overflow-x: hidden;
 }
+
 a:link,
 a:visited {
    text-decoration: none;
